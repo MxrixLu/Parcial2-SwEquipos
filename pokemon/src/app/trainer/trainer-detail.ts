@@ -2,7 +2,7 @@ import { Pokemon } from "../pokemon/Pokemon";
 import { Trainer } from "./Trainer";
 
 export class TrainerDetail extends Trainer {
-
+    
     constructor(
         id: number,
         name: string,

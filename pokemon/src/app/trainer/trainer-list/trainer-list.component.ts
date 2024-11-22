@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Trainer } from '../Trainer';
-import { dataTrainers } from '../dataTrainers';
 import { TrainerService } from '../trainer.service';
 import { TrainerDetail } from '../trainer-detail';
 
@@ -10,13 +9,16 @@ import { TrainerDetail } from '../trainer-detail';
   styleUrls: ['./trainer-list.component.css'],
 })
 export class TrainerListComponent implements OnInit {
-  trainers: Array<Trainer> = [];
-  selected: Boolean = false;
-  selectedTrainer!: Trainer;
+  trainers: Array<TrainerDetail> = [];
+  selected: boolean = false;
+  selectedTrainer!: TrainerDetail;
+  searchedTrainer: any;
+  cantidad_pokemons: number = 0;
   constructor(private trainerService: TrainerService) {}
 
   getTrainers(): void {
     this.trainerService.getTrainers().subscribe({next: apiData => this.trainers = apiData });
+    this.cantidad_pokemons+=1;
   }
 
   ngOnInit() {

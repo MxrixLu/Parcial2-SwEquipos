@@ -11,6 +11,7 @@
           <th class="h4">Trainers's Name</th>
           <th class="h4">Trainer's Image</th>
           <th class="h4">Trainer's Samll snapshot</th>
+          <th class="h4"> Cantidad Pokemon</th>
         </tr>
       </thead>
       <tbody>
@@ -31,6 +32,9 @@
           </td>
           <td>
             <dd>{{ t.smallSnopsies }}</dd>
+          </td>
+          <td>
+            {{ t.pokemons.length }}
           </td>
         </tr>
       </tbody>

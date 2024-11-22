@@ -7,7 +7,11 @@ import { TrainerRoutingModule } from './trainer-routing.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, PokemonModule, RouterModule, TrainerRoutingModule],
+  imports: [
+    CommonModule,
+    PokemonModule, 
+    RouterModule, 
+    TrainerRoutingModule],
   declarations: [TrainerListComponent, TrainerDetailComponent],
   exports: [TrainerListComponent],
 })

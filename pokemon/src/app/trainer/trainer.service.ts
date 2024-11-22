@@ -16,6 +16,6 @@ export class TrainerService {
   }
 
   getTrainer(id: string): Observable<TrainerDetail> {
-    return this.http.get<TrainerDetail>(this.apiUrl + '/' + id + "/trainers.json");
+    return this.http.get<TrainerDetail>(this.apiUrl  + id + "/trainers.json");
   }
 }
